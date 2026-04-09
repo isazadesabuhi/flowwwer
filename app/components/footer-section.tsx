@@ -1,68 +1,74 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const footerNavigation = [
-  "Projets",
-  "Notre methode",
-  "A propos",
-  "Liste de prix",
-  "Temoignages",
-  "FAQs",
-];
+const leftColumnLinks = ["Projets", "Notre méthode", "À propos"] as const;
+const rightColumnLinks = ["Liste de prix", "Témoignages", "FAQs"] as const;
 
 export function FooterSection() {
   return (
-    <footer className="relative mt-auto overflow-hidden rounded-[32px] bg-[#f1efeb] px-6 py-10 text-[#111111] sm:px-8 sm:py-12 lg:min-h-[560px] lg:px-[72px] lg:py-[72px]">
+    <footer className="relative mt-auto overflow-hidden rounded-[30px] bg-[#f1efeb] px-6 py-8 text-[#111111] sm:px-8 sm:py-9 lg:min-h-[430px] lg:px-[56px] lg:py-[34px]">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.68)_62%,rgba(255,255,255,0.88)_100%)]" />
-          <Image
-            src="/background_image.jpg"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-contain object-center"
-          />
-        </div>
-      
+        <Image
+          src="/background_image.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(241,239,235,0.9)_0%,rgba(241,239,235,0.42)_34%,rgba(241,239,235,0.36)_66%,rgba(241,239,235,0.8)_100%)]" />
+      </div>
 
-      <div className="relative z-10 flex min-h-full flex-col justify-between gap-16 lg:min-h-[416px]">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
-          <div className="max-w-[24rem]">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-3 text-[1.8rem] font-medium tracking-[-0.06em] sm:text-[2rem]"
-          >
-            <Image
-              src="/logo.svg"
-              alt="Flowwwer logo"
-              width={626}
-              height={687}
-              className="h-8 w-8 object-contain sm:h-9 sm:w-9"
-            />
-            <span>Flowwwer</span>
-          </Link>
+      <div className="relative z-10 flex min-h-full flex-col justify-between gap-8 lg:min-h-[362px]">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+          <div className="max-w-[23rem]">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2.5 text-[1.65rem] font-medium tracking-[-0.06em] sm:text-[1.85rem]"
+            >
+              <Image
+                src="/logo.svg"
+                alt="Flowwwer logo"
+                width={626}
+                height={687}
+                className="h-7 w-7 object-contain sm:h-8 sm:w-8"
+              />
+              <span>Flowwwer</span>
+            </Link>
 
-          <p className="mt-10 max-w-[22rem] text-[1.1rem] leading-[1.65] text-[#818181] sm:text-[1.15rem]">
-            Un studio de design boutique creant des experiences web haut de
-            gamme, axees sur le minimalisme et l&apos;elegance fonctionnelle.
-          </p>
-        </div>
+            <p className="mt-8 max-w-[22rem] text-[1.02rem] leading-[1.62] text-[#8a8a8a] sm:text-[1.08rem]">
+              Un studio de design boutique créant des expériences web haut de
+              gamme, axées sur le minimalisme et l&apos;élégance fonctionnelle.
+            </p>
+          </div>
 
-          <nav className="grid grid-cols-1 gap-x-18 gap-y-6 text-[1rem] text-[#111111] sm:grid-cols-2 sm:text-[1.1rem] lg:pt-2">
-            {footerNavigation.map((item) => (
-              <Link
-                key={item}
-                href="#"
-                className="transition-opacity duration-200 hover:opacity-55"
-              >
-                {item}
-              </Link>
-            ))}
+          <nav className="grid grid-cols-2 gap-x-12 gap-y-0 text-[1rem] text-[#111111] sm:gap-x-18 sm:text-[1.06rem] lg:min-w-[320px]">
+            <div className="flex flex-col gap-5">
+              {leftColumnLinks.map((item) => (
+                <Link
+                  key={item}
+                  href="#"
+                  className="transition-opacity duration-200 hover:opacity-55"
+                >
+                  {item}
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-col gap-5">
+              {rightColumnLinks.map((item) => (
+                <Link
+                  key={item}
+                  href="#"
+                  className="transition-opacity duration-200 hover:opacity-55"
+                >
+                  {item}
+                </Link>
+              ))}
+            </div>
           </nav>
         </div>
 
-        <div className="text-[1rem] text-[#111111]">
-          <p>© 2026 Flowwwer, Tous droits reserves</p>
+        <div className="text-[0.96rem] text-[#111111] sm:text-[1rem]">
+          <p>© 2026 Flowwwer, Tous droits réservés</p>
         </div>
       </div>
     </footer>
