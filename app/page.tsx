@@ -27,12 +27,12 @@ export default function Home() {
         <section className="flex items-center justify-center">
           <div className="flex w-full max-w-[860px] flex-col items-center text-center">
             <h1 className="max-w-[12ch] text-[3.35rem] font-semibold leading-[0.94] tracking-[-0.03em] text-[#111111] sm:text-[4.6rem] lg:max-w-none lg:text-[3.45rem]">
-              Elegance digitale
+              Élégance digitale
             </h1>
 
             <p className={`${pclasses} max-w-[35rem] px-2 sm:mt-5 lg:mt-6 sm:w-1/2 lg:px-0`}>
-              Un studio de design boutique creant des experiences web haut de
-              gamme, axees sur le minimalisme et l&apos;elegance fonctionnelle.
+              Un studio de design boutique créant des expériences web haut de
+              gamme, axées sur le minimalisme et l&apos;élégance fonctionnelle.
             </p>
 
             <div className="flex w-full flex-col items-center gap-4 sm:mt-12 sm:gap-5 lg:mt-5 lg:flex-row lg:flex-wrap lg:justify-center lg:gap-3">
@@ -51,7 +51,7 @@ export default function Home() {
         <section className="py-10 sm:py-14 lg:py-20">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <h2 className="text-[1.7rem] tracking-[-0.05em] text-[#111111] sm:text-[2.2rem]">
-            Projets selectionnes
+            Projets sélectionnés
           </h2>
           <Link
             href="/projects"
@@ -94,14 +94,14 @@ export default function Home() {
     <section className="">
           <div className="mx-auto flex max-w-[760px] flex-col items-center text-center">
             <span className="inline-flex min-h-10 items-center rounded-full bg-[#f2f2f2] px-5 text-[0.92rem] text-[#555555]">
-              Notre methode
+              Notre méthode
             </span>
             <h2 className={`${h2classes} mt-5 max-w-[12ch] lg:max-w-[11ch]` }>
-              Trois etapes vers votre excellence digitale
+              Trois étapes vers votre excellence digitale
             </h2>
             <p className="mt-4 max-w-[38rem] text-[1rem] leading-[1.65] text-[#8a8a8a] sm:text-[1.1rem]">
-              Nous fusionnons l&apos;IA et le sur-mesure en Next.js pour creer
-              votre ecosysteme en un temps record, sans delais.
+              Nous fusionnons l&apos;IA et le sur-mesure en Next.js pour créer
+              votre écosystème en un temps record, sans délais.
             </p>
           </div>
     
@@ -161,11 +161,11 @@ export default function Home() {
       <div className="mx-auto max-w-[1180px]">
         <div className="flex flex-col items-center text-center">
           <span className="inline-flex min-h-10 items-center rounded-full bg-[#f4f2ef] px-5 text-[0.92rem] text-[#555555]">
-            A propos
+            À propos
           </span>
           <h2 className={`${h2classes} mt-8 w-full sm:w-6/7` }>
-            Fusionnant <span className="font-semibold text-[#111111]">minimalisme radical</span> et expertise technique, notre studio batit des{" "}
-            <span className="font-semibold text-[#111111]">identites numeriques</span> durables pour les marques visionnaires.
+            Fusionnant <span className="font-semibold text-[#111111]">minimalisme radical</span> et expertise technique, notre studio bâtit des{" "}
+            <span className="font-semibold text-[#111111]">identités numériques</span> durables pour les marques visionnaires.
           </h2>
         </div>
 
@@ -195,7 +195,7 @@ export default function Home() {
           <div className="relative min-h-[420px] overflow-hidden rounded-[28px] sm:min-h-[520px] lg:min-h-[600px]">
             <Image
               src="/img.jpg"
-              alt="Equipe en reunion dans un studio lumineux"
+              alt="Équipe en réunion dans un studio lumineux"
               fill
               sizes="(max-width: 1023px) 100vw, 70vw"
               className="object-cover"
@@ -212,12 +212,12 @@ export default function Home() {
             Services
           </span>
           <h2 className={`${h2classes} mt-8 w-full sm:w-6/7`}>
-            L&apos;alliance du design d&apos;elite et de l&apos;ingenierie moderne
+            L&apos;alliance du design d&apos;élite et de l&apos;ingénierie moderne
           </h2>
           <p className={pclasses + " mt-5 max-w-[46rem] sm:text-[1.08rem]"}>
-            De l&apos;identite visuelle au developpement sur mesure, chaque ligne
-            de code est pensee pour transformer vos visiteurs en clients
-            fideles et propulser votre marque a l&apos;international.
+            De l&apos;identité visuelle au développement sur mesure, chaque ligne
+            de code est pensée pour transformer vos visiteurs en clients
+            fidèles et propulser votre marque à l&apos;international.
           </p>
         </div>
 
@@ -255,10 +255,10 @@ export default function Home() {
             Liste de prix
           </span>
           <h2 className={`${h2classes} mt-7` }>
-            Propulsez votre presence digitale en un temps record
+            Propulsez votre présence digitale en un temps record
           </h2>
           <p className={pclasses + " mt-5 max-w-[46rem] sm:text-[1.08rem]"}>
-            Du diagnostic strategique offert au developpement sur mesure
+            Du diagnostic stratégique offert au développement sur mesure
             complet, choisissez le pack qui correspond a la croissance de votre
             entreprise.
           </p>
@@ -310,7 +310,7 @@ export default function Home() {
                 }`}
               >
                 <span className={isRecommanded ? "text-[#111111]" : "text-white"}>
-                  Reserver l&apos;appel
+                  Réserver l&apos;appel
                 </span>
               </Link>
 
@@ -361,10 +361,10 @@ export default function Home() {
             FAQs
           </span>
           <h2 className="mt-7 max-w-[11ch] text-[2.5rem] font-normal leading-[1.02] tracking-[-0.07em] text-[#111111] sm:text-[3.6rem] lg:text-[4.5rem]">
-            Propulsez votre presence digitale en un temps record
+            Propulsez votre présence digitale en un temps record
           </h2>
           <p className="mt-5 max-w-[42rem] text-[1rem] leading-[1.65] text-[#8b8b8b] sm:text-[1.08rem]">
-            Du diagnostic strategique offert au developpement sur mesure
+            Du diagnostic stratégique offert au développement sur mesure
             complet, choisissez le pack qui correspond a la croissance de votre
             entreprise.
           </p>

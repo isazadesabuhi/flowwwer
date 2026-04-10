@@ -4,24 +4,24 @@ import { useState } from "react";
 
 const faqItems = [
   {
-    question: "Pourquoi etes-vous plus rapides qu'une agence classique ?",
+    question: "Pourquoi êtes-vous plus rapides qu'une agence classique ?",
     answer:
-      "Grace a notre workflow optimise par l'IA et notre expertise en Next.js, nous eliminons les processus lourds des agences traditionnelles. Nous nous concentrons sur l'essentiel : un design d'elite et un code performant, livres en quelques jours sans compromis sur la qualite.",
+      "Grâce à notre workflow optimisé par l'IA et notre expertise en Next.js, nous éliminons les processus lourds des agences traditionnelles. Nous nous concentrons sur l'essentiel : un design d'élite et un code performant, livrés en quelques jours sans compromis sur la qualité.",
   },
   {
-    question: "Serai-je proprietaire du code et pourrai-je le modifier librement?",
+    question: "Serai-je propriétaire du code et pourrai-je le modifier librement ?",
     answer:
-      "Oui. Une fois le projet livre, vous disposez du code source et pouvez le faire evoluer librement avec votre equipe ou avec nous selon vos besoins.",
+      "Oui. Une fois le projet livré, vous disposez du code source et pouvez le faire évoluer librement avec votre équipe ou avec nous selon vos besoins.",
   },
   {
     question: "Vos tarifs incluent-ils la maintenance et les modifications futures?",
     answer:
-      "Les forfaits couvrent la conception et la livraison du projet. La maintenance continue et les evolutions peuvent ensuite etre encadrees via un accompagnement adapte.",
+      "Les forfaits couvrent la conception et la livraison du projet. La maintenance continue et les évolutions peuvent ensuite être encadrées via un accompagnement adapté.",
   },
   {
-    question: "Mon site sera-t-il optimise pour Google et la vitesse de chargement?",
+    question: "Mon site sera-t-il optimisé pour Google et la vitesse de chargement ?",
     answer:
-      "Oui. Nous travaillons la structure, les performances et les bonnes pratiques techniques pour fournir un site rapide, propre et favorable au referencement.",
+      "Oui. Nous travaillons la structure, les performances et les bonnes pratiques techniques pour fournir un site rapide, propre et favorable au référencement.",
   },
 ] as const;
 
@@ -36,10 +36,10 @@ export function FaqSection() {
             FAQs
           </span>
           <h2 className="mt-7 max-w-[11ch] text-[2.5rem] font-normal leading-[1.02] tracking-[-0.07em] text-[#111111] sm:text-[3.6rem] lg:text-[4.5rem]">
-            Propulsez votre presence digitale en un temps record
+            Propulsez votre présence digitale en un temps record
           </h2>
           <p className="mt-5 max-w-[42rem] text-[1rem] leading-[1.65] text-[#8b8b8b] sm:text-[1.08rem]">
-            Du diagnostic strategique offert au developpement sur mesure
+            Du diagnostic stratégique offert au développement sur mesure
             complet, choisissez le pack qui correspond a la croissance de votre
             entreprise.
           </p>

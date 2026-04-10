@@ -6,11 +6,11 @@ export const servicePills = [
     className: "bg-[#eef0ff] text-[#3f48ff]",
   },
   {
-    label: "Identite Visuelle",
+    label: "Identité Visuelle",
     className: "bg-[#f8ecff] text-[#9f36ff]",
   },
   {
-    label: "Developpement Web",
+    label: "Développement Web",
     className: "bg-[#edf7e9] text-[#4ea51f]",
   },
 ];
@@ -18,45 +18,45 @@ export const servicePills = [
 export const projects = [
   {
     name: "Wattflow",
-    alt: "Apercu du projet Wattflow",
+    alt: "Aperçu du projet Wattflow",
   },
   {
     name: "Flexhire App",
-    alt: "Apercu du projet Flexhire App",
+    alt: "Aperçu du projet Flexhire App",
   },
   {
     name: "Flexhire Web",
-    alt: "Apercu du projet Flexhire Web",
+    alt: "Aperçu du projet Flexhire Web",
   },
 ];
 
 export const steps = [
   {
     number: "1",
-    title: "Strategie",
+    title: "Stratégie",
     description:
-      "Nous analysons vos objectifs pour definir une direction claire et pertinente. Cette etape est essentielle pour aligner votre vision avec les attentes de vos utilisateurs.",
+      "Nous analysons vos objectifs pour définir une direction claire et pertinente. Cette étape est essentielle pour aligner votre vision avec les attentes de vos utilisateurs.",
     image: exampleimg,
-    imageAlt: "Illustration florale pour la phase de strategie",
-    quote: "La clarte est la politesse du design.",
+    imageAlt: "Illustration florale pour la phase de stratégie",
+    quote: "La clarté est la politesse du design.",
   },
   {
     number: "2",
     title: "Design",
     description:
-      "Nous concevons des interfaces minimalistes, esthetiques et centrees sur l'utilisateur. Nous transformons des concepts complexes en experiences digitales simples et memorables.",
+      "Nous concevons des interfaces minimalistes, esthétiques et centrées sur l'utilisateur. Nous transformons des concepts complexes en expériences digitales simples et mémorables.",
     image: exampleimg,
     imageAlt: "Illustration florale pour la phase de design",
     quote: "Le design donne une forme lisible a l'intention.",
   },
   {
     number: "3",
-    title: "Realisation",
+    title: "Réalisation",
     description:
-      "Nous transformons le design en un produit digital performant et haut de gamme. Chaque detail est soigne pour garantir une interaction fluide et une qualite irreprochable.",
+      "Nous transformons le design en un produit digital performant et haut de gamme. Chaque détail est soigné pour garantir une interaction fluide et une qualité irréprochable.",
     image: exampleimg,
-    imageAlt: "Illustration florale pour la phase de realisation",
-    quote: "L'execution transforme la vision en experience concrete.",
+    imageAlt: "Illustration florale pour la phase de réalisation",
+    quote: "L'exécution transforme la vision en expérience concrète.",
   },
 ] as const;
 
@@ -66,12 +66,12 @@ export const aboutHighlights = [
   {
     title: "Propulser l'innovation",
     description:
-      "Creer des experiences digitales qui transforment la complexite en simplicite radicale.",
+      "Créer des expériences digitales qui transforment la complexité en simplicité radicale.",
   },
   {
-    title: "Definir le futur",
+    title: "Définir le futur",
     description:
-      "Devenir la reference du design haut de gamme pour les marques les plus ambitieuses.",
+      "Devenir la référence du design haut de gamme pour les marques les plus ambitieuses.",
   },
 ];
 
@@ -81,21 +81,21 @@ export const services = [
     labelClassName: "bg-[#eef0ff] text-[#5a64ff]",
     title: "Accompagnement Digital",
     description:
-      "Nous assurons la perennite de vos solutions via un accompagnement strategique, continu et une evolution constante.",
+      "Nous assurons la pérennité de vos solutions via un accompagnement stratégique, continu et une évolution constante.",
   },
   {
-    label: "Identite Visuelle",
+    label: "Identité Visuelle",
     labelClassName: "bg-[#f8ecff] text-[#9f36ff]",
-    title: "Identite Visuelle",
+    title: "Identité Visuelle",
     description:
-      "Nous faconnons des identites visuelles singulieres pour traduire fidelement votre vision strategique et marquer durablement les esprits.",
+      "Nous façonnons des identités visuelles singulières pour traduire fidèlement votre vision stratégique et marquer durablement les esprits.",
   },
   {
-    label: "Developpement Web",
+    label: "Développement Web",
     labelClassName: "bg-[#edf7e9] text-[#61aa35]",
-    title: "Developpement Web",
+    title: "Développement Web",
     description:
-      "Concevoir des interfaces epurees alliant esthetique minimaliste et performance pour sublimer l'experience de vos utilisateurs.",
+      "Concevoir des interfaces épurées alliant esthétique minimaliste et performance pour sublimer l'expérience de vos utilisateurs.",
   },
 ];
 
@@ -105,25 +105,25 @@ export const pricingPlans = [
     title: "Consultation",
     price: "€0.00",
     description:
-      "Un echange de 30 minutes pour analyser votre ecosysteme digital. Refonte complete ou conseil cible : nous definissons ensemble votre trajectoire de croissance.",
+      "Un échange de 30 minutes pour analyser votre écosystème digital. Refonte complète ou conseil ciblé : nous définissons ensemble votre trajectoire de croissance.",
     recommanded: false,
     features: [
-      "Identite de Marque",
-      "Experience Web & UI",
-      "Performance & Developpement",
-      "Evolution & Support",
+      "Identité de Marque",
+      "Expérience Web & UI",
+      "Performance & Développement",
+      "Évolution & Support",
       "30 minutes pour analyser",
     ],
   },
   {
-    label: "Recommande",
+    label: "Recommandé",
     title: "Consultation",
     price: "€4.999",
     description:
-      "Une identite forte alliee a une structure web dynamique : une landing page pour convertir et un blog pour captiver, le tout gere par un CMS intuitif.",
+      "Une identité forte alliée à une structure web dynamique : une landing page pour convertir et un blog pour captiver, le tout géré par un CMS intuitif.",
     recommanded: true,
     features: [
-      "Strategie de Marque Avancee",
+      "Stratégie de Marque Avancée",
       "Plateforme Web 20+ Pages",
       "Architecture CMS Complexe",
       "Accompagnement Prioritaire",
@@ -135,10 +135,10 @@ export const pricingPlans = [
     title: "Consultation",
     price: "€4.999",
     description:
-      "L'ecosysteme complet pour entreprises ambitieuses. Une plateforme robuste et evolutive, alliant strategie de marque profonde et architecture de contenu complexe.",
+      "L'écosystème complet pour entreprises ambitieuses. Une plateforme robuste et évolutive, alliant stratégie de marque profonde et architecture de contenu complexe.",
     recommanded: false,
     features: [
-      "Strategie de Marque Avancee",
+      "Stratégie de Marque Avancée",
       "Plateforme Web 20+ Pages",
       "Architecture CMS Complexe",
       "Accompagnement Prioritaire",
@@ -149,23 +149,23 @@ export const pricingPlans = [
 
 export const faqItems = [
   {
-    question: "Pourquoi etes-vous plus rapides qu'une agence classique ?",
+    question: "Pourquoi êtes-vous plus rapides qu'une agence classique ?",
     answer:
-      "Grace a notre workflow optimise par l'IA et notre expertise en Next.js, nous eliminons les processus lourds des agences traditionnelles. Nous nous concentrons sur l'essentiel : un design d'elite et un code performant, livres en quelques jours sans compromis sur la qualite.",
+      "Grâce à notre workflow optimisé par l'IA et notre expertise en Next.js, nous éliminons les processus lourds des agences traditionnelles. Nous nous concentrons sur l'essentiel : un design d'élite et un code performant, livrés en quelques jours sans compromis sur la qualité.",
   },
   {
-    question: "Serai-je proprietaire du code et pourrai-je le modifier librement?",
+    question: "Serai-je propriétaire du code et pourrai-je le modifier librement ?",
     answer:
-      "Oui. Une fois le projet livre, vous disposez du code source et pouvez le faire evoluer librement avec votre equipe ou avec nous selon vos besoins.",
+      "Oui. Une fois le projet livré, vous disposez du code source et pouvez le faire évoluer librement avec votre équipe ou avec nous selon vos besoins.",
   },
   {
     question: "Vos tarifs incluent-ils la maintenance et les modifications futures?",
     answer:
-      "Les forfaits couvrent la conception et la livraison du projet. La maintenance continue et les evolutions peuvent ensuite etre encadrees via un accompagnement adapte.",
+      "Les forfaits couvrent la conception et la livraison du projet. La maintenance continue et les évolutions peuvent ensuite être encadrées via un accompagnement adapté.",
   },
   {
-    question: "Mon site sera-t-il optimise pour Google et la vitesse de chargement?",
+    question: "Mon site sera-t-il optimisé pour Google et la vitesse de chargement ?",
     answer:
-      "Oui. Nous travaillons la structure, les performances et les bonnes pratiques techniques pour fournir un site rapide, propre et favorable au referencement.",
+      "Oui. Nous travaillons la structure, les performances et les bonnes pratiques techniques pour fournir un site rapide, propre et favorable au référencement.",
   },
 ] as const;

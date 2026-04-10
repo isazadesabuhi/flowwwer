@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Flowwwer",
-  description: "Studio de design boutique pour experiences web haut de gamme.",
+  description: "Studio de design boutique pour expériences web haut de gamme.",
 };
 
 export default function RootLayout({

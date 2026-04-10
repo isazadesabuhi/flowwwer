@@ -7,10 +7,10 @@ import phone from "@/public/phone.svg";
 
 const navigationItems = [
   "Projets",
-  "Notre methode",
-  "A propos",
+  "Notre méthode",
+  "À propos",
   "Liste de prix",
-  "Temoignages",
+  "Témoignages",
   "FAQs",
 ];
 
