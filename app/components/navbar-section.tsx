@@ -78,7 +78,7 @@ export function NavbarSection() {
         </nav>
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
           <Link
-            href="tel:+33000000000"
+            href="tel:+33783418879"
             className="inline-flex h-10 items-center gap-1.5 rounded-full bg-[#111111] px-3.5 py-4 text-[0.9rem] font-medium text-white transition-transform duration-200 hover:scale-[1.02] sm:h-12 sm:gap-2 sm:px-6 sm:text-[1rem]"
           >
             <Image src={phone} alt="" width={20} height={20} className="h-5 w-5" />
