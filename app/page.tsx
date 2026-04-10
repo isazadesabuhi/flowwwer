@@ -17,26 +17,29 @@ import {
 export default function Home() {
     const [activeStep, setActiveStep] = useState<MethodStep>(steps[0]);
     const [openQuestion, setOpenQuestion] = useState<string>(faqItems[0].question);
+
+    const h2classes = "text-[2.4rem] leading-[1.02] tracking-[-0.06em] text-[#111111] sm:text-[3.2rem]  lg:text-[4rem]";
+    const pclasses = "text-4 leading-[1.4] text-[#8f8f8f] sm:text-[1.2rem] lg:text-[14px] font-medium";
     
   return (
     <main className="flex min-h-screen flex-col gap-y-[70px] lg:gap-y-[120px] bg-[#fcfbf8] text-[#111111]">
       {/* Introduction */}
         <section className="flex items-center justify-center">
           <div className="flex w-full max-w-[860px] flex-col items-center text-center">
-            <h1 className="max-w-[12ch] text-[3.35rem] font-normal leading-[0.94] tracking-[-0.07em] text-[#111111] sm:text-[4.6rem] lg:max-w-none lg:text-[3.85rem]">
+            <h1 className="max-w-[12ch] text-[3.35rem] font-semibold leading-[0.94] tracking-[-0.03em] text-[#111111] sm:text-[4.6rem] lg:max-w-none lg:text-[3.45rem]">
               Elegance digitale
             </h1>
 
-            <p className="mt-4 max-w-[35rem] px-2 text-[1rem] leading-[1.6] text-[#8f8f8f] sm:mt-5 sm:text-[1.2rem] lg:mt-6 lg:max-w-[610px] lg:px-0 lg:text-[1.35rem]">
+            <p className={`${pclasses} max-w-[35rem] px-2 sm:mt-5 lg:mt-6 sm:w-1/2 lg:px-0`}>
               Un studio de design boutique creant des experiences web haut de
               gamme, axees sur le minimalisme et l&apos;elegance fonctionnelle.
             </p>
 
-            <div className="mt-9 flex w-full flex-col items-center gap-4 sm:mt-12 sm:gap-5 lg:mt-9 lg:flex-row lg:flex-wrap lg:justify-center lg:gap-3">
+            <div className="flex w-full flex-col items-center gap-4 sm:mt-12 sm:gap-5 lg:mt-5 lg:flex-row lg:flex-wrap lg:justify-center lg:gap-3">
               {servicePills.map((pill) => (
                 <span
                   key={pill.label}
-                  className={`inline-flex min-h-13 w-full max-w-fit items-center justify-center rounded-[18px] px-6 text-[0.95rem] font-medium tracking-[-0.03em] sm:min-h-14 sm:px-8 sm:text-[1.05rem] ${pill.className}`}
+                  className={`inline-flex w-full max-w-fit items-center justify-center rounded-[18px] py-2 px-6 text-[0.95rem] font-medium tracking-[-0.03em] sm:px-4 sm:py-3 sm:text-[1rem] ${pill.className}`}
                 >
                   {pill.label}
                 </span>
@@ -46,21 +49,22 @@ export default function Home() {
         </section>
         {/* projects */}
         <section className="py-10 sm:py-14 lg:py-20">
-      <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-        <h2 className="text-[1.7rem] tracking-[-0.05em] text-[#111111] sm:text-[2.2rem]">
-          Projets selectionnes
-        </h2>
-        <Link
-          href="#"
-          className="inline-flex h-10 items-center rounded-full bg-[#f1f1f1] px-4 text-[0.9rem] font-medium text-[#3a3a3a] transition-colors duration-200 hover:bg-[#e8e8e8] sm:h-11 sm:text-[0.92rem]"
-        >
-          Afficher tout
-        </Link>
-      </div>
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+          <h2 className="text-[1.7rem] tracking-[-0.05em] text-[#111111] sm:text-[2.2rem]">
+            Projets selectionnes
+          </h2>
+          <Link
+            href="/projects"
+            className="hidden lg:inline-flex h-10 items-center rounded-full bg-[#f1f1f1] px-4 text-[0.9rem] font-medium text-[#3a3a3a] transition-colors duration-200 hover:bg-[#e8e8e8] sm:h-11 sm:text-[0.92rem] "
+          >
+            Afficher tout
+          </Link>
+        </div>
 
       <div className="mt-7 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {projects.map((project) => (
           <article key={project.name}>
+            <Link href={`/projects/${project.name}`} className="group">
             <div className="relative aspect-[1/1.04] overflow-hidden rounded-[24px] bg-[#f2f2f2] sm:aspect-[1/1.1] xl:aspect-[1/1.16]">
               <Image
                 src="/img.jpg"
@@ -70,12 +74,21 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
+            </Link>
             <h3 className="px-1 pt-3 text-[1.45rem] tracking-[-0.05em] text-[#111111] sm:px-2 sm:pt-4 sm:text-[1.8rem] lg:text-[2rem]">
               {project.name}
             </h3>
           </article>
         ))}
       </div>
+      <div className="pt-3 lg:hidden">
+       <Link
+            href="/projects"
+            className="flex h-10 items-center justify-center rounded-full bg-[#f1f1f1] px-4 text-[0.9rem] font-medium text-[#3a3a3a] transition-colors duration-200 hover:bg-[#e8e8e8] sm:h-11 sm:text-[0.92rem]"
+          >
+            Afficher tout
+          </Link>
+          </div>
           </section>
     {/* Methods */}
     <section className="">
@@ -83,7 +96,7 @@ export default function Home() {
             <span className="inline-flex min-h-10 items-center rounded-full bg-[#f2f2f2] px-5 text-[0.92rem] text-[#555555]">
               Notre methode
             </span>
-            <h2 className="mt-5 max-w-[12ch] text-[2.4rem] leading-[1.02] tracking-[-0.06em] text-[#111111] sm:text-[3.2rem] lg:max-w-[11ch] lg:text-[4rem]">
+            <h2 className={`${h2classes} mt-5 max-w-[12ch] lg:max-w-[11ch]` }>
               Trois etapes vers votre excellence digitale
             </h2>
             <p className="mt-4 max-w-[38rem] text-[1rem] leading-[1.65] text-[#8a8a8a] sm:text-[1.1rem]">
@@ -150,7 +163,7 @@ export default function Home() {
           <span className="inline-flex min-h-10 items-center rounded-full bg-[#f4f2ef] px-5 text-[0.92rem] text-[#555555]">
             A propos
           </span>
-          <h2 className="mt-8 max-w-[15ch] text-[2.75rem] font-normal leading-[1.08] tracking-[-0.07em] text-[#8d8d8d] sm:text-[4rem] lg:max-w-[13ch] lg:text-[5.1rem]">
+          <h2 className={`${h2classes} mt-8 w-full sm:w-6/7` }>
             Fusionnant <span className="font-semibold text-[#111111]">minimalisme radical</span> et expertise technique, notre studio batit des{" "}
             <span className="font-semibold text-[#111111]">identites numeriques</span> durables pour les marques visionnaires.
           </h2>
@@ -173,9 +186,9 @@ export default function Home() {
 
             <Link
               href="tel:+33783418879"
-              className="mt-10 inline-flex h-12 w-fit items-center rounded-full bg-[#111111] px-6 text-[1rem] font-medium text-white transition-transform duration-200 hover:scale-[1.02] lg:mt-auto"
+              className="mt-10 inline-flex h-12 w-fit items-center rounded-full bg-[#111111] px-6 text-[1rem] font-medium transition-transform duration-200 hover:scale-[1.02] lg:mt-auto"
             >
-              Appelez-nous
+              <span className="text-white">Appelez-nous</span>
             </Link>
           </aside>
 
@@ -198,10 +211,10 @@ export default function Home() {
           <span className="inline-flex min-h-10 items-center rounded-full bg-[#f4f2ef] px-5 text-[0.92rem] text-[#555555]">
             Services
           </span>
-          <h2 className="mt-7 max-w-[10ch] text-[2.5rem] font-normal leading-[1.02] tracking-[-0.07em] text-[#111111] sm:text-[3.6rem] lg:text-[4.5rem]">
+          <h2 className={`${h2classes} mt-8 w-full sm:w-6/7`}>
             L&apos;alliance du design d&apos;elite et de l&apos;ingenierie moderne
           </h2>
-          <p className="mt-5 max-w-[46rem] text-[1rem] leading-[1.65] text-[#8b8b8b] sm:text-[1.08rem]">
+          <p className={pclasses + " mt-5 max-w-[46rem] sm:text-[1.08rem]"}>
             De l&apos;identite visuelle au developpement sur mesure, chaque ligne
             de code est pensee pour transformer vos visiteurs en clients
             fideles et propulser votre marque a l&apos;international.
@@ -223,7 +236,7 @@ export default function Home() {
                 <h3 className="text-[2rem] tracking-[-0.05em] text-[#111111] sm:text-[2.1rem]">
                   {service.title}
                 </h3>
-                <p className="mt-3 max-w-[34rem] text-[1rem] leading-[1.7] text-[#8a8a8a] sm:text-[1.05rem]">
+                <p className={pclasses + " mt-3 max-w-[34rem] sm:text-[1.05rem]"}>
                   {service.description}
                 </p>
               </div>
@@ -241,10 +254,10 @@ export default function Home() {
           <span className="inline-flex min-h-10 items-center rounded-full bg-[#f4f2ef] px-5 text-[0.92rem] text-[#555555]">
             Liste de prix
           </span>
-          <h2 className="mt-7 max-w-[11ch] text-[2.5rem] font-normal leading-[1.02] tracking-[-0.07em] text-[#111111] sm:text-[3.6rem] lg:text-[4.5rem]">
+          <h2 className={`${h2classes} mt-7` }>
             Propulsez votre presence digitale en un temps record
           </h2>
-          <p className="mt-5 max-w-[46rem] text-[1rem] leading-[1.65] text-[#8b8b8b] sm:text-[1.08rem]">
+          <p className={pclasses + " mt-5 max-w-[46rem] sm:text-[1.08rem]"}>
             Du diagnostic strategique offert au developpement sur mesure
             complet, choisissez le pack qui correspond a la croissance de votre
             entreprise.
@@ -252,16 +265,21 @@ export default function Home() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 xl:mt-14 xl:grid-cols-3">
-          {pricingPlans.map((plan) => (
+          {pricingPlans.map((plan) => {
+            const isRecommanded = plan.recommanded;
+            const cardClassName = isRecommanded
+              ? "bg-[#111111] text-white"
+              : "bg-[#f5f5f3] text-[#111111]";
+            const featurePanelClassName = isRecommanded ? "bg-[#282828]" : "bg-white";
+
+            return (
             <article
               key={plan.label}
-              className={`flex min-h-[560px] flex-col rounded-[26px] p-6 sm:p-7 ${plan.cardClassName}`}
+              className={`flex min-h-[560px] flex-col rounded-[26px] p-6 sm:p-7 ${cardClassName}`}
             >
               <span
-                className={`inline-flex min-h-10 w-fit items-center rounded-full px-4 text-[0.92rem] ${
-                  plan.cardClassName.includes("text-white")
-                    ? "bg-white text-[#111111]"
-                    : "bg-white text-[#555555]"
+                className={`inline-flex min-h-10 w-fit items-center rounded-full bg-white px-4 text-[0.92rem] ${
+                  isRecommanded ? "text-[#111111]" : "text-[#555555]"
                 }`}
               >
                 {plan.label}
@@ -275,8 +293,8 @@ export default function Home() {
                   {plan.price}
                 </p>
                 <p
-                  className={`mt-5 text-[1rem] leading-[1.7] ${
-                    plan.cardClassName.includes("text-white")
+                  className={`${pclasses} mt-5  ${
+                    isRecommanded
                       ? "text-white/78"
                       : "text-[#8a8a8a]"
                   }`}
@@ -287,20 +305,24 @@ export default function Home() {
 
               <Link
                 href="tel:+33783418879"
-                className={`mt-8 inline-flex h-13 items-center justify-center rounded-full px-6 text-[1rem] font-medium transition-transform duration-200 hover:scale-[1.02] ${plan.buttonClassName}`}
+                className={`mt-8 inline-flex h-13 items-center justify-center rounded-full px-6 text-[1rem] font-medium transition-transform duration-200 hover:scale-[1.02] ${
+                  isRecommanded ? "bg-white" : "bg-[#111111]"
+                }`}
               >
-                Reserver l&apos;appel
+                <span className={isRecommanded ? "text-[#111111]" : "text-white"}>
+                  Reserver l&apos;appel
+                </span>
               </Link>
 
               <div
-                className={`mt-8 rounded-[22px] p-6 sm:p-7 ${plan.featurePanelClassName}`}
+                className={`mt-8 rounded-[22px] p-6 sm:p-7 ${featurePanelClassName}`}
               >
                 <ul className="space-y-4">
                   {plan.features.map((feature) => (
                     <li
                       key={feature}
                       className={`flex items-center gap-3 text-[0.98rem] ${
-                        plan.cardClassName.includes("text-white")
+                        isRecommanded
                           ? "text-white"
                           : "text-[#222222]"
                       }`}
@@ -325,7 +347,8 @@ export default function Home() {
                 </ul>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -106,9 +106,7 @@ export const pricingPlans = [
     price: "€0.00",
     description:
       "Un echange de 30 minutes pour analyser votre ecosysteme digital. Refonte complete ou conseil cible : nous definissons ensemble votre trajectoire de croissance.",
-    buttonClassName: "bg-[#111111] text-white",
-    cardClassName: "bg-[#f5f5f3] text-[#111111]",
-    featurePanelClassName: "bg-white",
+    recommanded: false,
     features: [
       "Identite de Marque",
       "Experience Web & UI",
@@ -123,9 +121,7 @@ export const pricingPlans = [
     price: "€4.999",
     description:
       "Une identite forte alliee a une structure web dynamique : une landing page pour convertir et un blog pour captiver, le tout gere par un CMS intuitif.",
-    buttonClassName: "bg-white text-[#111111]",
-    cardClassName: "bg-[#111111] text-white",
-    featurePanelClassName: "bg-[#282828]",
+    recommanded: true,
     features: [
       "Strategie de Marque Avancee",
       "Plateforme Web 20+ Pages",
@@ -140,9 +136,7 @@ export const pricingPlans = [
     price: "€4.999",
     description:
       "L'ecosysteme complet pour entreprises ambitieuses. Une plateforme robuste et evolutive, alliant strategie de marque profonde et architecture de contenu complexe.",
-    buttonClassName: "bg-[#111111] text-white",
-    cardClassName: "bg-[#f5f5f3] text-[#111111]",
-    featurePanelClassName: "bg-white",
+    recommanded: false,
     features: [
       "Strategie de Marque Avancee",
       "Plateforme Web 20+ Pages",
