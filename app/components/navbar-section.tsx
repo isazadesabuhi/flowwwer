@@ -33,12 +33,12 @@ export function NavbarSection() {
             priority
             className="h-8 w-8 shrink-0 object-contain sm:h-9 sm:w-9"
           />
-          <span className="truncate text-[1.05rem] font-medium tracking-[-0.05em] text-[#111111] sm:text-[1.35rem] lg:text-[2.1rem] lg:tracking-[-0.06em]">
+          <span className="truncate text-[18px] font-medium  text-[#111111] sm:text-[1.35rem] lg:text-[24px] lg:tracking-[0.5px]">
             Flowwwer
           </span>
         </Link>
-
-        <nav className="hidden items-center gap-7 text-[0.98rem] text-[#222222] xl:gap-10 xl:text-[1.05rem] 2xl:gap-12 lg:flex">
+        <div className="flex flex-row gap-7">
+          <nav className="hidden items-center gap-7 text-[12px] text-[#222222] xl:text-[16px] 2xl:gap-10 lg:flex">
           {navigationItems.map((item) => (
             <Link
               key={item}
@@ -49,13 +49,12 @@ export function NavbarSection() {
             </Link>
           ))}
         </nav>
-
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
           <Link
             href="tel:+33000000000"
-            className="inline-flex h-10 items-center gap-1.5 rounded-full bg-[#111111] px-3.5 text-[0.9rem] font-medium text-white transition-transform duration-200 hover:scale-[1.02] sm:h-12 sm:gap-2 sm:px-6 sm:text-[1rem]"
+            className="inline-flex h-10 items-center gap-1.5 rounded-full bg-[#111111] px-3.5 py-4 text-[0.9rem] font-medium text-white transition-transform duration-200 hover:scale-[1.02] sm:h-12 sm:gap-2 sm:px-6 sm:text-[1rem]"
           >
-            <Image src={phone} alt="" width={16} height={16} className="h-4 w-4" />
+            <Image src={phone} alt="" width={20} height={20} className="h-5 w-5" />
             <span className="text-white">Appel</span>
           </Link>
 
@@ -90,6 +89,12 @@ export function NavbarSection() {
             </svg>
           </button>
         </div>
+
+        </div>
+
+        
+
+        
       </div>
 
       {isMenuOpen ? (

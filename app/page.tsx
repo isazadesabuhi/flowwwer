@@ -19,15 +19,15 @@ export default function Home() {
     const [openQuestion, setOpenQuestion] = useState<string>(faqItems[0].question);
     
   return (
-    <main className="flex min-h-screen flex-col gap-y-[50px] lg:gap-y-[100px] bg-[#fcfbf8] text-[#111111]">
+    <main className="flex min-h-screen flex-col gap-y-[70px] lg:gap-y-[120px] bg-[#fcfbf8] text-[#111111]">
       {/* Introduction */}
         <section className="flex items-center justify-center">
           <div className="flex w-full max-w-[860px] flex-col items-center text-center">
-            <h1 className="max-w-[12ch] text-[3.35rem] font-normal leading-[0.94] tracking-[-0.07em] text-[#111111] sm:text-[4.6rem] lg:max-w-none lg:text-[5.85rem]">
+            <h1 className="max-w-[12ch] text-[3.35rem] font-normal leading-[0.94] tracking-[-0.07em] text-[#111111] sm:text-[4.6rem] lg:max-w-none lg:text-[3.85rem]">
               Elegance digitale
             </h1>
 
-            <p className="mt-4 max-w-[35rem] px-2 text-[1rem] leading-[1.6] text-[#8f8f8f] sm:mt-5 sm:text-[1.2rem] lg:mt-6 lg:max-w-[690px] lg:px-0 lg:text-[1.35rem]">
+            <p className="mt-4 max-w-[35rem] px-2 text-[1rem] leading-[1.6] text-[#8f8f8f] sm:mt-5 sm:text-[1.2rem] lg:mt-6 lg:max-w-[610px] lg:px-0 lg:text-[1.35rem]">
               Un studio de design boutique creant des experiences web haut de
               gamme, axees sur le minimalisme et l&apos;elegance fonctionnelle.
             </p>

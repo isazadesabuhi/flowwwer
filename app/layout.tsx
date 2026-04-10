@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 
 import { FooterSection } from "./components/footer-section";
 import { NavbarSection } from "./components/navbar-section";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin"],
 });
 
@@ -28,10 +28,10 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased mx-[20px] my-[20px]`}
+      className={`${instrumentSans.variable} ${geistMono.variable} h-full antialiased mx-[20px] my-[20px]`}
     >
       
-      <body className="flex min-h-full flex-col gap-y-[50px] lg:gap-y-[100px]">
+      <body className="flex min-h-full flex-col gap-y-[70px] lg:gap-y-[120px]">
         <NavbarSection />
         {children}
         <FooterSection />
