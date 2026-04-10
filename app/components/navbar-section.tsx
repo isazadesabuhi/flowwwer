@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import phone from "@/public/phone.svg";
 
 const navigationItems = [
@@ -16,9 +16,36 @@ const navigationItems = [
 
 export function NavbarSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+
+  useEffect(() => {
+    let previousScrollY = window.scrollY;
+
+    function handleScroll() {
+      const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - previousScrollY;
+
+      if (Math.abs(scrollDelta) < 4) {
+        return;
+      }
+
+      setIsNavbarVisible(currentScrollY < 80 || scrollDelta < 0);
+      previousScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="relative">
+    <header
+      className={`sticky top-0 z-50 bg-[#fcfbf8] transition-transform duration-300 ease-out ${
+        isNavbarVisible ? "translate-y-0" : "-translate-y-[calc(100%+24px)]"
+      }`}
+    >
       <div className="flex items-center justify-between gap-3 sm:gap-4">
         <Link
           href="/"
