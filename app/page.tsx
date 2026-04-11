@@ -22,7 +22,7 @@ export default function Home() {
     const pclasses = "text-4 leading-[1.4] text-[#8f8f8f] sm:text-[1.2rem] lg:text-[14px] font-medium";
     
   return (
-    <main className="flex min-h-screen flex-col gap-y-[70px] lg:gap-y-[120px] bg-[#fcfbf8] text-[#111111]">
+    <main className="flex min-h-screen flex-col gap-y-[70px] lg:gap-y-[120px] text-[#111111]">
       {/* Introduction */}
         <section className="flex items-center justify-center">
           <div className="flex w-full max-w-[860px] flex-col items-center text-center">

@@ -50,7 +50,7 @@ export function NavbarSection() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-[#fcfbf8] transition-transform duration-300 ease-out ${
+      className={`sticky top-0 z-50  transition-transform duration-300 ease-out ${
         isNavbarVisible ? "translate-y-0" : "-translate-y-[calc(100%+24px)]"
       }`}
     >
@@ -135,7 +135,7 @@ export function NavbarSection() {
       {isMenuOpen ? (
         <nav
           id="mobile-navigation"
-          className="fixed inset-x-0 bottom-0 top-[72px] z-40 flex min-h-[calc(100vh-72px)] flex-col bg-[#fcfbf8] px-[20px] pb-[20px] pt-6 sm:top-[88px] sm:min-h-[calc(100vh-88px)] lg:hidden"
+          className="fixed inset-x-0 bottom-0 top-[72px] z-40 flex min-h-[calc(100vh-72px)] flex-col px-[20px] pb-[20px] pt-6 sm:top-[88px] sm:min-h-[calc(100vh-88px)] lg:hidden"
         >
           <div className="flex flex-1 flex-col items-center justify-between gap-8 text-center">
             <div className="flex flex-col items-center gap-10 sm:gap-15 text-[1.4rem] text-[#222222] font-medium">

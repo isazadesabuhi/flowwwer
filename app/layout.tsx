@@ -30,11 +30,14 @@ export default function RootLayout({
       lang="fr"
       className={`${instrumentSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="px-[20px] py-[20px] flex min-h-full flex-col gap-y-[70px] lg:gap-y-[120px]">
-        <NavbarSection />
+      <body className="flex min-h-full flex-col px-[20px]">
+        <div className="py-[20px] mb-[70px] lg:mb-[120px]"><NavbarSection /></div>
         {children}
-        <FooterSection />
       </body>
+      <div className="pt-[70px] lg:pt-[120px] pb-[20px]">
+        <FooterSection />
+      </div>
+      
     </html>
   );
 }
