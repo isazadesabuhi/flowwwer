@@ -40,6 +40,14 @@ export function NavbarSection() {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   return (
     <header
       className={`sticky top-0 z-50 bg-[#fcfbf8] transition-transform duration-300 ease-out ${
@@ -77,13 +85,13 @@ export function NavbarSection() {
           ))}
         </nav>
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
-          <Link
+          {isMenuOpen ? null : <Link
             href="tel:+33783418879"
             className="inline-flex h-10 items-center gap-1.5 rounded-full bg-[#111111] px-3.5 py-4 text-[0.9rem] font-medium text-white transition-transform duration-200 hover:scale-[1.02] sm:h-12 sm:gap-2 sm:px-6 sm:text-[1rem]"
           >
             <Image src={phone} alt="" width={20} height={20} className="h-5 w-5" />
             <span className="text-white">Appel</span>
-          </Link>
+          </Link>}
 
           <button
             type="button"
@@ -127,9 +135,10 @@ export function NavbarSection() {
       {isMenuOpen ? (
         <nav
           id="mobile-navigation"
-          className="absolute left-0 right-0 top-full z-20 mt-3 rounded-[24px] border border-black/8 bg-[#fcfbf8] p-5 shadow-[0_18px_45px_rgba(17,17,17,0.08)] lg:hidden"
+          className="fixed inset-x-0 bottom-0 top-[72px] z-40 flex min-h-[calc(100vh-72px)] flex-col bg-[#fcfbf8] px-[20px] pb-[20px] pt-6 sm:top-[88px] sm:min-h-[calc(100vh-88px)] lg:hidden"
         >
-          <div className="flex flex-col gap-4 text-[1rem] text-[#222222]">
+          <div className="flex flex-1 flex-col items-center justify-between gap-8 text-center">
+            <div className="flex flex-col items-center gap-10 sm:gap-15 text-[1.4rem] text-[#222222] font-medium">
             {navigationItems.map((item) => (
               <Link
                 key={item}
@@ -140,6 +149,16 @@ export function NavbarSection() {
                 {item}
               </Link>
             ))}
+            </div>
+
+            <Link
+              href="tel:+33783418879"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-[#111111] px-6 text-[1rem] font-medium transition-transform duration-200 hover:scale-[1.02]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Image src={phone} alt="" width={20} height={20} className="h-5 w-5" />
+              <span className="text-white">Appel</span>
+            </Link>
           </div>
         </nav>
       ) : null}
